@@ -332,8 +332,9 @@ header {
 
     /*About Me*/
     .about-me {
-    max-width: 1000px;
-    margin: 0 auto;
+        background-color: var(--clr-dark);
+        max-width: 1000px;
+        margin: 0 auto;
     }
 
     .about-me__img {
