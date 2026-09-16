@@ -1,0 +1,139 @@
+/* =============================================================
+   Design tokens — clean & professional, light + dark themes.
+   Custom properties pierce shadow DOM, so Lit components inherit
+   all of these automatically.
+   ============================================================= */
+
+:root {
+  /* Type */
+  --ff-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --ff-mono: 'SFMono-Regular', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace;
+
+  /* Fluid type scale */
+  --fs-display: clamp(2.5rem, 6vw, 4.5rem);
+  --fs-h2: clamp(1.75rem, 3.5vw, 2.5rem);
+  --fs-h3: 1.25rem;
+  --fs-body: 1.0625rem;
+  --fs-small: 0.875rem;
+
+  --fw-normal: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-black: 800;
+
+  /* Spacing / layout */
+  --content-width: 1080px;
+  --gutter: clamp(1rem, 5vw, 3rem);
+  --radius: 14px;
+  --radius-sm: 8px;
+
+  /* Motion */
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --transition: 220ms var(--ease);
+
+  /* Brand accent — refined indigo/blue: professional, quietly nods to the ecosystem */
+  --accent: #4f66e0;
+  --accent-strong: #3b4fc4;
+  --accent-contrast: #ffffff;
+}
+
+/* Light theme (default) */
+:root,
+:root[data-theme='light'] {
+  color-scheme: light;
+  --bg: #f7f8fc;
+  --bg-elevated: #ffffff;
+  --surface: #ffffff;
+  --border: #e4e7f0;
+  --text: #1a1d29;
+  --text-muted: #5b6072;
+  --shadow: 0 1px 2px rgba(26, 29, 41, 0.06), 0 12px 32px -12px rgba(26, 29, 41, 0.18);
+  --accent-tint: rgba(79, 102, 224, 0.1);
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    color-scheme: dark;
+    --bg: #0d0f16;
+    --bg-elevated: #151824;
+    --surface: #161a27;
+    --border: #262b3d;
+    --text: #eceef5;
+    --text-muted: #9aa0b5;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 16px 40px -16px rgba(0, 0, 0, 0.6);
+    --accent: #7c8ff0;
+    --accent-strong: #6478ec;
+    --accent-tint: rgba(124, 143, 240, 0.14);
+  }
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --bg: #0d0f16;
+  --bg-elevated: #151824;
+  --surface: #161a27;
+  --border: #262b3d;
+  --text: #eceef5;
+  --text-muted: #9aa0b5;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 16px 40px -16px rgba(0, 0, 0, 0.6);
+  --accent: #7c8ff0;
+  --accent-strong: #6478ec;
+  --accent-tint: rgba(124, 143, 240, 0.14);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--ff-sans);
+  font-size: var(--fs-body);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  transition: background var(--transition), color var(--transition);
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 999;
+  background: var(--accent);
+  color: var(--accent-contrast);
+  padding: 0.75em 1.25em;
+  border-radius: 0 0 var(--radius-sm) 0;
+  font-weight: var(--fw-semibold);
+}
+.skip-link:focus {
+  left: 0;
+}
+
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 3px;
+}

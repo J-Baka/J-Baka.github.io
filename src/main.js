@@ -1,0 +1,10 @@
+import './components/theme.js';
+import './components/site-header.js';
+import './components/hero-section.js';
+import './components/skills-grid.js';
+import './components/about-section.js';
+import './components/certifications-section.js';
+import './components/experience-section.js';
+import './components/projects-section.js';
+import './components/site-footer.js';
+import './components/reveal-on-scroll.js';

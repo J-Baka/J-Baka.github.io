@@ -1,0 +1,20 @@
+{
+  "name": "matt-hernandez-portfolio",
+  "version": "2.0.0",
+  "description": "Portfolio site for Matt Hernandez, Salesforce Developer. Built with Vite + Lit.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "lit": "^3.2.1"
+  },
+  "devDependencies": {
+    "vite": "^6.0.7"
+  },
+  "allowScripts": {
+    "esbuild@0.25.12": true
+  }
+}
