@@ -2,6 +2,7 @@ import { LitElement, html, css } from 'lit';
 import { sharedStyles } from '../styles/shared.js';
 import { projects } from '../data/content.js';
 import './property-map-demo.js';
+import './storefront-demo.js';
 
 class ProjectsSection extends LitElement {
   static styles = [
@@ -74,10 +75,13 @@ class ProjectsSection extends LitElement {
         display: grid;
         gap: 1.75rem;
         padding: clamp(1.25rem, 3vw, 2rem);
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
         background: var(--surface);
         border: 1px solid var(--border);
         border-radius: var(--radius);
+      }
+      .featured > * {
+        min-width: 0; /* let wide demo content scroll inside instead of stretching the card */
       }
       .featured h3 {
         font-size: clamp(1.3rem, 2.4vw, 1.6rem);
@@ -159,6 +163,8 @@ class ProjectsSection extends LitElement {
     switch (name) {
       case 'property-map':
         return html`<property-map-demo></property-map-demo>`;
+      case 'storefront':
+        return html`<storefront-demo></storefront-demo>`;
       default:
         return '';
     }

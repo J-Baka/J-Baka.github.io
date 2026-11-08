@@ -130,4 +130,27 @@ export const projects = [
     repo: null,
     demo: null,
   },
+  {
+    // TODO: adjust the context/problem/result to match the real project you built.
+    title: 'Guided Storefront with OmniScript & FlexCards',
+    context: 'OmniStudio build · guided request flow',
+    summary:
+      'An OmniScript whose first step is a storefront of FlexCards. Card actions talk to the script over pubsub, so the selection flows straight into the guided process.',
+    problem:
+      'Users needed to browse a catalog, see details, and build a request in one guided flow, without jumping between a product list, a record page and a separate form.',
+    approach: [
+      'Product catalog rendered as FlexCards with states for in stock, low stock, out of stock and already added, fed by a DataRaptor.',
+      'Card actions fire pubsub events (item focused, selected, removed) on a shared channel instead of coupling cards to the script.',
+      'The OmniScript registers for those events, writes the selection into its data JSON, and fires an update back so every card reflects what is in the request.',
+      'Later steps configure quantity and options per line, then review totals before submitting.',
+    ],
+    result:
+      'One guided experience from browsing to submission, with loosely coupled components that can be reused on other pages or scripts.',
+    tags: ['OmniScript', 'FlexCards', 'PubSub', 'LWC', 'DataRaptor'],
+    liveDemo: 'storefront',
+    demoNote:
+      'Live re-creation in web components. The panels below the demo show the data JSON and every pubsub event as it fires.',
+    repo: null,
+    demo: null,
+  },
 ];
