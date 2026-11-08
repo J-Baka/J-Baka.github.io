@@ -102,15 +102,31 @@ export const experience = [
   },
 ];
 
-/* Projects / case studies. Keep them as text case studies for now.
-   Leave `demo` null; later we can wire a live LWC-style demo to a card. */
+/* Projects / case studies.
+   - `liveDemo` names an interactive component to embed (renders as a
+     full-width featured case study with problem / approach / result).
+   - `repo` / `demo` are optional external links. */
 export const projects = [
   {
-    title: 'Case Study — Coming Soon',
-    // TODO: replace with an anonymized case study: problem -> approach -> result
+    title: 'Property Matching Map for Housing Case Workers',
+    context: 'Housing services nonprofit · delivered through a Salesforce consulting partner',
     summary:
-      'A real problem you solved on-platform, framed as: the challenge, what you built (Apex/LWC/Flow/integration), and the measurable result.',
-    tags: ['Apex', 'LWC', 'Flow'],
+      'A Lightning Web Component that shows case workers every nearby rental (available now or opening soon) right from a client’s record.',
+    problem:
+      'Case workers placing clients into housing had to cross-reference property lists against client addresses by hand. There was no way to see what was close to a client, or what would open up in the next few weeks.',
+    approach: [
+      'Built an LWC for Property and Person Account record pages, plus an address-search version for app and home pages.',
+      'Apex resolves the starting point per record type: stored geolocation for properties, a live REST geocoding callout for a client’s mailing address.',
+      'A SOQL DISTANCE()/GEOLOCATION() query returns available and soon-available units within a radius, rendered as color-coded pins with rent, bedrooms and access details.',
+      'Friendly error handling for addresses that can’t be geocoded, and Apex test classes with mocked callouts.',
+    ],
+    // TODO: add a measurable result if you have one (time saved per placement, adoption, etc.)
+    result:
+      'Case workers see every nearby match in one view from the record they are already on, instead of searching property lists by hand.',
+    tags: ['LWC', 'Apex', 'SOQL Geolocation', 'REST Callout', 'lightning-map'],
+    liveDemo: 'property-map',
+    demoNote:
+      'Live re-creation: real address geocoding, with generated sample listings in place of client data. The original runs the same flow through Apex and SOQL.',
     repo: null,
     demo: null,
   },

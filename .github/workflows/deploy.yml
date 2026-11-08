@@ -36,6 +36,10 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          # LocationIQ public token for the property map demo (tiles + geocoding).
+          # Set it under Settings → Secrets and variables → Actions.
+          VITE_LOCATIONIQ_KEY: ${{ secrets.LOCATIONIQ_KEY }}
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
