@@ -94,7 +94,7 @@ class CertificationsSection extends LitElement {
 
   render() {
     return html`
-      <section class="section container" id="certifications" aria-labelledby="certs-h">
+      <section class="section container" aria-labelledby="certs-h">
         <p class="eyebrow">Credentials</p>
         <h2 id="certs-h">Certifications</h2>
         <p class="lead">Salesforce certifications I've earned — verified on Trailhead.</p>

@@ -55,7 +55,7 @@ class AboutSection extends LitElement {
   render() {
     return html`
       <div class="wrap">
-        <section class="section container" id="about" aria-labelledby="about-h">
+        <section class="section container" aria-labelledby="about-h">
           <div class="grid">
             <div>
               <p class="eyebrow">About me</p>

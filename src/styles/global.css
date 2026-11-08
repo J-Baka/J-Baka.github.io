@@ -93,6 +93,13 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Nav targets: the section ids live on the custom elements in index.html
+   (ids inside a component's shadow DOM can't be reached by #links).
+   Offset so headings land below the sticky header. */
+main > [id] {
+  scroll-margin-top: 64px;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

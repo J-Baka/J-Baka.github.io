@@ -76,7 +76,7 @@ class ExperienceSection extends LitElement {
   render() {
     return html`
       <div class="wrap">
-        <section class="section container" id="experience" aria-labelledby="exp-h">
+        <section class="section container" aria-labelledby="exp-h">
           <p class="eyebrow">Career</p>
           <h2 id="exp-h">Experience</h2>
           <p class="lead">Where I've delivered on the platform.</p>

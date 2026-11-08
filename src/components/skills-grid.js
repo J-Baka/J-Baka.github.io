@@ -85,7 +85,7 @@ class SkillsGrid extends LitElement {
 
   render() {
     return html`
-      <section class="section container" id="skills" aria-labelledby="skills-h">
+      <section class="section container" aria-labelledby="skills-h">
         <p class="eyebrow">What I do</p>
         <h2 id="skills-h">Skills &amp; capabilities</h2>
         <p class="lead">The Salesforce toolkit I bring to a team — from Apex and LWC to automation, integrations, and delivery.</p>

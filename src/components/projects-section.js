@@ -204,7 +204,7 @@ class ProjectsSection extends LitElement {
 
   render() {
     return html`
-      <section class="section container" id="projects" aria-labelledby="proj-h">
+      <section class="section container" aria-labelledby="proj-h">
         <p class="eyebrow">Selected work</p>
         <h2 id="proj-h">Case studies</h2>
         <p class="lead">Problem, approach, result — the way I think about delivery on the platform.</p>
