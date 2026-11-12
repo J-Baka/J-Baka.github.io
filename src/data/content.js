@@ -17,10 +17,8 @@ export const profile = {
   email: 'matthewph96@gmail.com',
   linkedin: 'https://www.linkedin.com/in/hernan-p-matt/',
   github: 'https://github.com/J-Baka',
-  // TODO: drop resume.pdf into /public and this link works; or set to null to hide the button
   resume: '/resume.pdf',
-  // TODO: your public Trailhead / Trailblazer profile URL
-  trailhead: 'https://www.salesforce.com/trailblazer/', // e.g. https://www.salesforce.com/trailblazer/your-handle
+  trailhead: 'https://www.salesforce.com/trailblazer/mhernandez267',
   headshot: '/img/Matt_Headshot.jpg',
 };
 
