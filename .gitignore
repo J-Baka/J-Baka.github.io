@@ -3,3 +3,8 @@ dist/
 .DS_Store
 *.local
 .vite/
+
+# Local environment files (never commit secrets like the LocationIQ key)
+.env
+.env.*
+!.env.example
