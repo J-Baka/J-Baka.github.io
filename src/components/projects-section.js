@@ -3,6 +3,7 @@ import { sharedStyles } from '../styles/shared.js';
 import { projects } from '../data/content.js';
 import './property-map-demo.js';
 import './storefront-demo.js';
+import './docgen-demo.js';
 
 class ProjectsSection extends LitElement {
   static styles = [
@@ -165,6 +166,8 @@ class ProjectsSection extends LitElement {
         return html`<property-map-demo></property-map-demo>`;
       case 'storefront':
         return html`<storefront-demo></storefront-demo>`;
+      case 'docgen':
+        return html`<docgen-demo></docgen-demo>`;
       default:
         return '';
     }

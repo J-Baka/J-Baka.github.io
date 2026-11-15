@@ -208,4 +208,26 @@ export const projects = [
     repo: null,
     demo: null,
   },
+  {
+    title: 'Document Generation with OmniStudio DataMappers',
+    context: 'OmniStudio DocGen · forms and summaries for multiple clients',
+    summary:
+      'Word templates filled straight from Salesforce records: Extract and Transform DataMappers shape the data into tokens, and the template renders checkboxes, repeating tables and signatures.',
+    problem:
+      'Programs needed consistent, signed documents (enrollment summaries, assessments, consent forms) built from data already in Salesforce, with checkboxes, related lists and signatures, instead of staff retyping it into Word.',
+    approach: [
+      'Word templates with Mustache-style tokens: {{Field}} values, {{#List}} sections that repeat per related record, and paired {{#IF_x}} / {{^IF_x}} sections around ☑ / ☐ for checkboxes.',
+      'An Extract DataMapper queries the record and its related lists; formulas turn picklists and multi-selects into IF_ booleans (LIKE "%;Value;%" contains checks, ISBLANK for tri-state Yes / No / blank).',
+      'A Transform DataMapper flattens the result to exactly the token names the template expects, formats dates, and sizes signature images pulled from ContentDocument files.',
+      'Hygiene checks on existing mappers: template tokens with no matching key, duplicate mapping rows, and stale template attachments.',
+    ],
+    result:
+      'Staff generate a complete, signed document from the record they are already on, and adding a field to a form is a template token plus a mapping row rather than new code.',
+    tags: ['OmniStudio DocGen', 'DataMappers', 'Word Templates', 'Formulas', 'ContentDocument'],
+    liveDemo: 'docgen',
+    demoNote:
+      'Edit the record or sign the pad and the document regenerates. The tabs underneath show each stage, and the template is editable: break a token and watch the token check catch it.',
+    repo: null,
+    demo: null,
+  },
 ];
