@@ -41,6 +41,11 @@ class ExperienceSection extends LitElement {
         color: var(--accent);
         font-weight: var(--fw-semibold);
       }
+      .client {
+        margin: -0.6rem 0 1rem;
+        font-size: var(--fs-small);
+        color: var(--text-muted);
+      }
       .period {
         font-family: var(--ff-mono);
         font-size: var(--fs-small);
@@ -89,6 +94,7 @@ class ExperienceSection extends LitElement {
                       <h3 class="role">${job.role} · <span class="company">${job.company}</span></h3>
                       <span class="period">${job.period}</span>
                     </div>
+                    ${job.client ? html`<p class="client">Client: ${job.client}</p>` : ''}
                     <ul>
                       ${job.bullets.map((b) => html`<li>${b}</li>`)}
                     </ul>

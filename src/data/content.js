@@ -80,23 +80,41 @@ export const certifications = [
 /* Experience — text-driven, structured. Each role has impact bullets. */
 export const experience = [
   {
-    // TODO: fill in with your real roles
     role: 'Salesforce Developer',
-    company: 'Company Name',
-    period: '2021 — Present',
+    company: 'Provisio Partners',
+    period: 'Feb 2024 — Present',
     bullets: [
-      'Built and maintained Apex services and Lightning Web Components supporting daily operations for X users.',
-      'Designed record-triggered Flows and automation that reduced manual work / handling time.',
-      'Integrated Salesforce with external systems via REST callouts and Named Credentials.',
+      'Lead OmniStudio practices across the firm as the company SME — building custom document generation, Experience Cloud–hosted interfaces, internal applications, and forms for multiple clients.',
+      'Lead the firm’s adoption of Copado, establishing source-driven deployment practices and managing releases across project environments for reliable, repeatable delivery.',
+      'Developed custom Apex web services integrating Salesforce with external databases, enabling bidirectional data exchange and streamlined data management.',
+      'Contributed to 25+ projects spanning full implementation lifecycles, on-demand debugging, managed services support, and technical architecture design.',
+      'Serve as a technical resource for clients on complex implementations, including tax solutions, Experience Cloud deployments, and program eligibility systems.',
     ],
   },
   {
-    role: 'Previous Role',
-    company: 'Company Name',
-    period: '2019 — 2021',
+    role: 'Salesforce Developer',
+    company: 'Revolent Group',
+    client: 'Cognizant',
+    period: 'Jan 2022 — 2023',
     bullets: [
-      'Impact bullet — start with a verb, quantify the result where you can.',
-      'Impact bullet.',
+      'Delivered the full software development lifecycle — design, implementation, and delivery — for three Financial Services Cloud projects.',
+      'Built Lightning Web Components and Apex services using object-oriented principles to meet specific business and architecture requirements.',
+      'Designed user flows and elevated UI experiences through OmniStudio development.',
+      'Led a technical team of 1–5 developers, owning technical decisions through successful project execution.',
+      'Troubleshot integration issues and bugs through system analysis and testing, delivering with no customer-requested rework.',
+      'Worked in an Agile, multi-disciplinary team using Jira.',
+    ],
+  },
+  {
+    role: 'Software Developer',
+    company: 'HCL Technologies',
+    client: 'Google',
+    period: 'Dec 2020 — Jan 2022',
+    bullets: [
+      'Built and maintained Python automation scripts for device and application testing.',
+      'Wrote functional and regression test cases with engineering counterparts, and validated new features across a wide range of Android OS builds and devices.',
+      'Coordinated between development and vendor teams to clarify project requirements.',
+      'Partnered with BMW’s development team on in-vehicle console and driving tests using a test vehicle.',
     ],
   },
 ];
