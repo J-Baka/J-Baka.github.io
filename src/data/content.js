@@ -70,11 +70,11 @@ export const about = {
    Put each badge image in /public/certs/ and point `logo` at it.
    `url` is optional (link to your verified credential). */
 export const certifications = [
-  { name: 'Platform Developer', logo: '/certs/platform-developer.png', earned: 'Apr 2025', url: null },
-  { name: 'OmniStudio Developer', logo: '/certs/omnistudio-developer.png', earned: 'Apr 2025', url: null },
-  { name: 'Agentforce Specialist', logo: '/certs/agentforce-specialist.png', earned: 'Feb 2025', url: null },
-  { name: 'Platform Administrator', logo: '/certs/platform-administrator.png', earned: 'Mar 2025', url: null },
-  { name: 'Platform App Builder', logo: '/certs/platform-app-builder.png', earned: 'Mar 2021', url: null },
+  { name: 'Platform Developer', logo: '/certs/platform-developer.png', earned: 'Mar 2022', url: null },
+  { name: 'OmniStudio Developer', logo: '/certs/omnistudio-developer.png', earned: 'Apr 2022', url: null },
+  { name: 'Agentforce Specialist', logo: '/certs/agentforce-specialist.png', earned: 'Dec 2024', url: null },
+  { name: 'Platform Administrator', logo: '/certs/platform-administrator.png', earned: 'Feb 2022', url: null },
+  { name: 'Platform App Builder', logo: '/certs/platform-app-builder.png', earned: 'Jul 2025', url: null },
 ];
 
 /* Experience — text-driven, structured. Each role has impact bullets. */
