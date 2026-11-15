@@ -9,7 +9,7 @@ class CertificationsSection extends LitElement {
       .grid {
         display: grid;
         gap: 1rem;
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
       }
       .cert {
         display: flex;
@@ -31,16 +31,16 @@ class CertificationsSection extends LitElement {
         box-shadow: var(--shadow);
       }
       .badge {
-        width: 92px;
-        height: 92px;
+        width: 120px;
+        height: 120px;
         object-fit: contain;
       }
       /* Fallback shown when a badge image is missing */
       .badge-fallback {
         display: grid;
         place-items: center;
-        width: 92px;
-        height: 92px;
+        width: 120px;
+        height: 120px;
         border-radius: 50%;
         background: var(--accent-tint);
         color: var(--accent);
@@ -56,6 +56,11 @@ class CertificationsSection extends LitElement {
         font-size: var(--fs-small);
         font-weight: var(--fw-semibold);
         line-height: 1.3;
+      }
+      .earned {
+        margin-top: -0.6rem;
+        font-size: 0.8rem;
+        color: var(--text-muted);
       }
       .trailhead-link {
         display: inline-flex;
@@ -81,11 +86,12 @@ class CertificationsSection extends LitElement {
 
   renderCert(c) {
     const inner = html`
-      <img class="badge" src=${c.logo} alt=${c.name + ' badge'} @error=${this._onImgError} />
+      <img class="badge" src=${c.logo} loading="lazy" width="120" height="120" alt=${c.name + ' badge'} @error=${this._onImgError} />
       <span class="badge-fallback" style="display:none" aria-hidden="true">
         <svg viewBox="0 0 24 24"><path d="M12 15a5 5 0 1 0 0-10 5 5 0 0 0 0 10z"/><path d="m8.5 13.5-2 7L12 18l5.5 2.5-2-7"/></svg>
       </span>
       <span class="name">${c.name}</span>
+      ${c.earned ? html`<span class="earned">Earned ${c.earned}</span>` : ''}
     `;
     return c.url
       ? html`<a class="cert" href=${c.url} target="_blank" rel="noopener">${inner}</a>`
