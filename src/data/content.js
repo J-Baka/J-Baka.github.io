@@ -6,14 +6,21 @@
    Anything marked  // TODO  is a placeholder for you to fill in.
    ============================================================= */
 
+/* Whole years elapsed since a 'YYYY-MM' start, so the site never goes stale. */
+const yearsSince = (start) => {
+  const [y, m] = start.split('-').map(Number);
+  const now = new Date();
+  return Math.floor((now.getFullYear() - y) + (now.getMonth() + 1 - m) / 12);
+};
+
 export const profile = {
   name: 'Matt Hernandez',
   role: 'Salesforce Developer',
-  // TODO: update the exact number
-  yearsExperience: 6,
+  // Computed from when I started on Salesforce (Revolent Group, Jan 2022).
+  yearsExperience: yearsSince('2022-01'),
   tagline:
     'I design and build on the Salesforce platform — Apex, Lightning Web Components, and integrations that connect Salesforce to the rest of the business.',
-  location: 'United States', // TODO: city/region if you want it shown
+  location: 'Menifee, CA',
   email: 'matthewph96@gmail.com',
   linkedin: 'https://www.linkedin.com/in/hernan-p-matt/',
   github: 'https://github.com/J-Baka',
@@ -25,44 +32,75 @@ export const profile = {
 // Front-and-center skills. Reorder / edit freely.
 export const skills = [
   {
-    title: 'Apex & Backend',
+    title: 'OmniStudio',
+    icon: 'layers',
+    items: [
+      'OmniScripts & FlexCards',
+      'DataRaptors / Data Mappers',
+      'Integration Procedures',
+      'Document Generation',
+      'Firm SME & practice lead',
+    ],
+  },
+  {
+    title: 'Apex & Integrations',
     icon: 'code',
-    items: ['Apex triggers & classes', 'Asynchronous (Batch, Queueable, Future)', 'SOQL / SOSL', 'Test-driven development'],
+    items: [
+      'Apex classes, triggers & test classes',
+      'Custom Apex REST web services',
+      'Callouts & bidirectional data sync',
+      'SOQL',
+      'Java, Python & JavaScript',
+    ],
   },
   {
-    title: 'Lightning Web Components',
+    title: 'Lightning & Experience Cloud',
     icon: 'component',
-    items: ['LWC & Aura', 'Lightning Data Service', 'Custom UI & app pages', 'Component-driven design'],
+    items: [
+      'Lightning Web Components',
+      'Experience Cloud sites & portals',
+      'Custom internal apps & forms',
+      'HTML / CSS / JavaScript',
+    ],
   },
   {
-    title: 'Automation',
-    icon: 'flow',
-    items: ['Flow (Screen, Record-Triggered)', 'Approval processes', 'Platform Events', 'Declarative + programmatic'],
-  },
-  {
-    title: 'Integrations',
-    icon: 'plug',
-    items: ['REST / SOAP callouts', 'Named Credentials & OAuth', 'Middleware patterns', 'External Services'],
-  },
-  {
-    title: 'Data & Modeling',
-    icon: 'data',
-    items: ['Custom objects & schema design', 'Sharing & security model', 'Large data volumes', 'Reports & dashboards'],
+    title: 'Automation & AI',
+    icon: 'ai',
+    items: [
+      'Flow (Screen, Record-Triggered, Scheduled)',
+      'Agentforce agents & actions',
+      'Prompt Builder templates',
+      'Financial Services Cloud',
+    ],
   },
   {
     title: 'DevOps & Delivery',
     icon: 'devops',
-    items: ['Salesforce DX (SFDX)', 'Git & CI/CD', 'Scratch orgs', 'Deployment & release mgmt'],
+    items: [
+      'Copado (led firm-wide adoption)',
+      'Salesforce DX & Git',
+      'Release management across environments',
+      'Agile delivery with Jira',
+    ],
+  },
+  {
+    title: 'Consulting & Leadership',
+    icon: 'people',
+    items: [
+      '25+ client projects delivered',
+      'Requirements & stakeholder management',
+      'Technical architecture design',
+      'Led dev teams of 1–5',
+    ],
   },
 ];
 
 export const about = {
-  intro: 'Salesforce Developer & Platform Engineer',
-  // TODO: rewrite in your own voice — this is a strong starting draft.
+  intro: 'Salesforce Developer & OmniStudio Lead',
   paragraphs: [
-    'I started out learning to program the way a lot of people do — building small full-stack projects and figuring things out as I went. Over the past several years I’ve grown into a Salesforce Developer, delivering solutions that solve real business problems on the platform.',
-    'I care about clean, well-tested Apex, thoughtful automation that admins can actually maintain, and integrations that don’t fall over. I’m equally comfortable talking through requirements with stakeholders and debugging a governor-limit issue at 4:59pm on a Friday.',
-    'I’m always learning — new features every release, new certifications, new patterns. This site itself is built with Lit web components, the same standard Lightning Web Components are built on.',
+    'I studied Electrical & Computer Engineering at California Baptist University and started my career at HCL Technologies, writing Python test automation for Google across Android devices, including in-vehicle testing alongside BMW’s development team.',
+    'In 2022 I moved onto the Salesforce platform with Revolent Group, delivering three Financial Services Cloud projects for Cognizant and leading small development teams. Today I’m a Salesforce Developer at Provisio Partners, where I lead the firm’s OmniStudio practice, drove its adoption of Copado, and have contributed to 25+ client projects, from Experience Cloud portals and document generation to Apex integrations and program-eligibility systems.',
+    'I’m always learning: new features every release, new certifications, new patterns. This site itself is built with Lit web components, the same standard Lightning Web Components are built on.',
   ],
 };
 

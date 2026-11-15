@@ -8,6 +8,9 @@ const ICONS = {
   flow: svg`<circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M6 8.5v4A3.5 3.5 0 0 0 9.5 16H16"/>`,
   plug: svg`<path d="M9 2v6M15 2v6M7 8h10v3a5 5 0 0 1-10 0zM12 16v6"/>`,
   data: svg`<ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/>`,
+  layers: svg`<path d="m12 3 9 5-9 5-9-5z"/><path d="m3 13 9 5 9-5"/>`,
+  ai: svg`<path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/>`,
+  people: svg`<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.6a3.5 3.5 0 0 1 0 6.8M18 14.2a6.5 6.5 0 0 1 3.5 5.8"/>`,
   devops: svg`<circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/>`,
 };
 
@@ -88,7 +91,7 @@ class SkillsGrid extends LitElement {
       <section class="section container" aria-labelledby="skills-h">
         <p class="eyebrow">What I do</p>
         <h2 id="skills-h">Skills &amp; capabilities</h2>
-        <p class="lead">The Salesforce toolkit I bring to a team — from Apex and LWC to automation, integrations, and delivery.</p>
+        <p class="lead">The Salesforce toolkit I bring to a team — from OmniStudio and Apex to integrations, automation, and delivery.</p>
         <div class="grid">
           ${skills.map(
             (s) => html`
